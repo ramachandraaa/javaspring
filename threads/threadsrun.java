@@ -36,7 +36,7 @@ public class threadsrun {
         //task1
         System.out.println("Task1 Kicked");
         Task1 task1=new Task1();
-        task1.setPriority(1);
+       task1.setPriority(1);
         task1.start();
 
        // System.out.println("Task1 Kicked");
@@ -44,10 +44,10 @@ public class threadsrun {
         System.out.println("Task2 Kicked");
         Myrun task2=new Myrun();
         Thread thread=new Thread(task2);
-        task1.setPriority(10);
+        thread.setPriority(10);
         thread.start();
-        task1.join();
-        thread.join();
+      //  task1.join();
+       // thread.join();
         System.out.println("Task 3 Started");
         for(int i=20;i<30;i++)
         {
